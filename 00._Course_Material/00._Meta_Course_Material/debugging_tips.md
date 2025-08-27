@@ -63,7 +63,7 @@ TypeError: Cannot read properties of undefined (reading 'name')
 
     There exists 3 possibilities as to why:
 
-    1. It has not been declared but not initialized: ```js let person;```. 
+    1. It has been declared but not initialized: ```js let person;```. 
 
     2. It has has been explicitly set to `undefined`: ``js const person = undefined;```
 
