@@ -1,0 +1,7 @@
+HTTP Method,Endpoint,Explanation
+GET,/books,Retrieve all books
+GET,/books/{id},Retrieve a single book
+POST,/books,Create a book resource
+PUT,/books/{id},Updates the entire book resource
+PATCH,/books/{id},Updates parts of the book resource
+DELETE,/books/{id},Deletes the resource
