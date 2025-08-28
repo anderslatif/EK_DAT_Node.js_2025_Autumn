@@ -19,7 +19,8 @@ a|
 * Intro to Node.js.
 * Variables, data types.
 * Intro Exercises.
-* Our REST API conventions vs. Link:https://en.wikipedia.org/wiki/Richardson_Maturity_Model[Richardson Maturity Model]
+* Our REST API conventions vs. 
+link:https://en.wikipedia.org/wiki/Richardson_Maturity_Model[Richardson Maturity Model]
 * Code conventions / Clean Code
 a|
 * Can work with Git in the terminal.
