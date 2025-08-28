@@ -15,11 +15,28 @@ link:00._Course_Material/00._Meta_Course_Material/about_the_course.md[About the 
 | 01. Introduction
 | Aug. 28
 a|
-
+* Intro to the course. Information about the mandatories / exam expectations.
+* Intro to Node.js.
+* Variables, data types.
+* Intro Exercises.
+* Our REST API conventions vs. Link:https://en.wikipedia.org/wiki/Richardson_Maturity_Model[Richardson Maturity Model]
+* Code conventions / Clean Code
 a|
-
+* Can work with Git in the terminal.
+* Understand and work with data types in JavaScript.
+* Can explain what Node.js is and how to run files with it.
+* Knows the existing data types in JavaScript and can work with them.
+* Understands type coercion and strategies to avoid it.
+* Can design a REST API.
+* Knows the three REST conventions we follow:
+1. Using the right HTTP verb,
+2. Ordering, 
+3. Naming (noun, plural) that maps to collections in your system.
+* While using a linter is not a requirement, having clean code is.
 a|
+link:00._Course_Material/01._Assignments/01._Introduction/REST_API_Design.md[REST API Design]
 
+link:00._Course_Material/01._Assignments/01._Introduction/Introduction_Exercises.md[Introduction Exercises]
 
 
 
