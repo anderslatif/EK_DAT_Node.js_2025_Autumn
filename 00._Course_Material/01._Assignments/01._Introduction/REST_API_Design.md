@@ -6,6 +6,7 @@ Planets
 
 <!-- todo -->
 
+**Hand-in**: Push the solution to your semester repository. 
  
 Note that you are to design and document a potential REST API that is CRUDable based on this topic. NOT implement it. 
 
