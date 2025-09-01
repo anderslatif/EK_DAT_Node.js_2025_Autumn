@@ -1,6 +1,6 @@
 # Linting Overview
 
-In this course it is a requirement for your exam project to adhere to clean code style guides. But how how you achieve this is up to you. 
+In this course it is a requirement for your exam project to adhere to clean code style guides. But how you achieve this is up to you. 
 
 Consider setting up a linter early in the semester to get used to its suggestions.
 
