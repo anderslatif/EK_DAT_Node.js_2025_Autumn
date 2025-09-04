@@ -6,7 +6,7 @@
 2. Create a new Express project from scratch. 
 
 
-3. Start implementing the REST API that does the **R** in CRUD over `FingerBones`. 
+3. Start implementing the REST API that does the **R** in CRUD over `Greek Gods`. 
 
 For this week you only need to implement the **GET** requests.
 
