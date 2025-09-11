@@ -4,6 +4,8 @@ const app = express();
 
 // console.log(app);
 
+// sets up body parsing
+app.use(express.json());
 
 
              // callback function
@@ -12,6 +14,12 @@ const app = express();
 app.get("/", (req, res) => {
     res.send(`<h1>Hello World</h1>
             <h3>Welcome to my page</h3>`);
+});
+
+// console.log(__dirname);
+
+app.get("/fashionbrands", (req, res) => {
+    res.sendFile(__dirname + "/ index.html");   
 });
 
 
@@ -37,10 +45,18 @@ then respond with what the bag contains
  */
 
 // assignment create a GET /urls route, create a query string with the length of "medium" and spiciness level of 6
+// /urls?length=medium&spiciness=6
 app.get("/urls", (req, res) => {
-    res.send({ });
+    console.log(req.query)
+    res.send({ data: req.query });
 });
 
+app.post("/subjects", (req, res) => {
+    console.log(req.body);
+    res.send({ data: req.body });
+});
+
+// task create a POST fashion brands and try sending a new fashion brand
 
         // http developer port
 app.listen(8080);
