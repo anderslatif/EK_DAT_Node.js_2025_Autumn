@@ -1,6 +1,6 @@
 # Rest API - Part II
 
-Finish the FingerBones API so that it allows for full CRUD. 
+Finish the `Greek Gods` API so that it allows for full CRUD. 
 
 Make sure to test it completely. It’s not finished until all edge cases have been tested. 
 
