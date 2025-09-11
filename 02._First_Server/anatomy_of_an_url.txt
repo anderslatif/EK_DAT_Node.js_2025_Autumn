@@ -1,0 +1,15 @@
+Anatomy of an URL
+
+protocol    domain     endpoint
+https://www.google.com/search?hl=en&q=pay%20attention
+        subdomain  top-level domain
+
+
+
+        query string ..........
+/search?hl=en&q=pay%20attention
+        query parameters
+
+
+        path variable
+/search/1

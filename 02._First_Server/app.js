@@ -36,6 +36,11 @@ where the client can define what should go in it
 then respond with what the bag contains
  */
 
+// assignment create a GET /urls route, create a query string with the length of "medium" and spiciness level of 6
+app.get("/urls", (req, res) => {
+    res.send({ });
+});
+
 
         // http developer port
 app.listen(8080);
