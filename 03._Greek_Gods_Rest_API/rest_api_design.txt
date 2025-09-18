@@ -2,4 +2,7 @@
 HTTP Method       Endpoint
 GET               /greekgods
 GET               /greekgods/:id
-
+POST              /greekgods
+PUT               /greekgods/:id
+PATCH             /greekgods/:id
+DELETE            /greekgods
