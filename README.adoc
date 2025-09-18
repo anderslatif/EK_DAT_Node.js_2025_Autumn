@@ -84,4 +84,18 @@ link:00._Course_Material/01._Assignments/03._Loop_Methods/CSS_Games.md[CSS Games
 
 link:00._Course_Material/01._Assignments/03._Loop_Methods/REST_API_Part_II.md[Greek Gods REST API - Part II]
 
+| 04. HTML / Time
+| Sep. 18th
+a|
+* CRUDable REST API - Part II.
+* Time.
+* Deployment.
+* Fetch.
+a|
+* Can create a full CRUDable REST API that follows conventions.
+* Can get the Date in Javascript.
+* Can write a fetch request without hesitation.
+a|
+link:00._Course_Material/01._Assignments/04._Time/Time_To_Deploy.md[Time to deploy]
+
 |===
