@@ -2,9 +2,9 @@
 
 Create a HTML website served with Express that revolves around time. 
 
-**Creativity** is strongly encouraged. I will make a thread. 
+**Creativity** is **strongly** encouraged. 
 
-**Hand-in**: In Teams with a link to the code in the repository and a link to the deployment.
+**Hand-in**: In Teams with a link to the code in the repository and a link to the deployment. I will make a thread. 
 
 ---
 
@@ -12,11 +12,11 @@ Create a HTML website served with Express that revolves around time.
 
 It must be deployed somehow. Deployment is not a learning goal for the course but it would still be neat if everyone could figure it out for this assignment. 
 
-Vercel is one option but there are many alternatives. Beware that Vercel is serverless so you can't have CSS and Javascript in multiple files. Define all CSS And JS in the HTML files for this assignment.
+Vercel is one option but there are many alternatives and you are free to choose any you like. 
 
-This is an excellent guide for Vercel:
+Vercel is free to use and doesn't require a credit card. The downside is that to make hosting cheap for them they only start your project if someone is requesting a route. This is called serverless computing.
 
-https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel
+Remember to define all CSS And JS in the HTML files for this assignment and look for the vercel.json in this respository and add it to your project.
 
 <!-- ---
 
