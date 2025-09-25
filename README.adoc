@@ -98,4 +98,23 @@ a|
 a|
 link:00._Course_Material/01._Assignments/04._Time/Time_To_Deploy.md[Time to deploy]
 
+| 05. Export / Import
+| Sep. 25th
+a|
+* Serving static files in Express.
+* Exporting and importing in frontend (type="module" attribute).
+* Commonjs vs. ES Modules in Node.js.
+* Client-side redirection vs. server-side redirection.
+* npm init and meta data in package.json.
+a|
+* Can work with both types of import/export in HTML.
+* Can import/export in both ways in Node.js (CommonJS and ES Modules). Knows the pros of using ES Modules.
+* Understands the security need for serving static files and can do it in Express.
+* Can recount the number of ways and approaches to redirection.
+* Understands the difference between client-side redirection and server-side.
+* Can argue for a better way to structure the frontend (assets, pages) and how to structure HTML.
+// * Semantic HTML: header, main, footer.
+a|
+link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_I.md[Mandatory I (Given)]
+
 |===
