@@ -113,8 +113,10 @@ a|
 * Can recount the number of ways and approaches to redirection.
 * Understands the difference between client-side redirection and server-side.
 * Can argue for a better way to structure the frontend (assets, pages) and how to structure HTML.
-// * Semantic HTML: header, main, footer.
 a|
 link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_I.md[Mandatory I (Given)]
+
+link:https://github.com/anderslatif/VercelShowcaseServingStaticFiles[How to serve static files with Vercel]
+
 
 |===
