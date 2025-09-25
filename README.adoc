@@ -112,7 +112,7 @@ a|
 * Understands the security need for serving static files and can do it in Express.
 * Can recount the number of ways and approaches to redirection.
 * Understands the difference between client-side redirection and server-side.
-* Can argue for a better way to structure the frontend (assets, pages) and how to structure HTML.
+// * Can argue for a better way to structure the frontend (assets, pages) and how to structure HTML.
 a|
 link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_I.md[Mandatory I (Given)]
 

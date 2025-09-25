@@ -1,0 +1,22 @@
+{
+  "name": "doginder",
+  "version": "0.0.1",
+  "description": "A Tinder for Indian dogs",
+  "keywords": [
+    "Tinder",
+    "dogs",
+    "Indian",
+    "love",
+    "romance"
+  ],
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
