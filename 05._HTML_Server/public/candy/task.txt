@@ -1,0 +1,2 @@
+# Task you are only allowed to add 1 line... make it not fail in the browser console
+#  i.e. make it console.log the result of candyFactory
