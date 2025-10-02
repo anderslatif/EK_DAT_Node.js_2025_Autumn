@@ -6,11 +6,11 @@ const app = express();
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.resolve('public/frontend/index.html'));
+    res.sendFile(path.resolve('public/pages/frontend/index.html'));
 });
 
 app.get("/matches", (req, res) => {
-    res.sendFile(path.resolve('public/matches/matches.html'));
+    res.sendFile(path.resolve('public/pages/matches/matches.html'));
 });
 
 

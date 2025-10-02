@@ -124,7 +124,7 @@ a|
 * Package.json scripts.
 * Environment Variables.
 * Fetching in Node.js.
-* Semantic HTML: header, main, footer.
+* Semantic HTML: nav, main, footer.
 a|
 * Can define and run scripts with NPM.
 * Know how to define environment variables natively in Node.js (natively = not using any libraries).
