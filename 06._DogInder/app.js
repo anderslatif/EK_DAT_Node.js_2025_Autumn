@@ -5,6 +5,8 @@ const app = express();
 
 app.use(express.static("public"));
 
+// ========================= PAGES =====================================
+
 app.get("/", (req, res) => {
     res.sendFile(path.resolve('public/pages/frontend/index.html'));
 });
@@ -13,8 +15,9 @@ app.get("/matches", (req, res) => {
     res.sendFile(path.resolve('public/pages/matches/matches.html'));
 });
 
+// ========================= API =======================================
 
-
+// task create a /api/matches route that returns 5 dog objects contain urls. 
 
 // falsy values
 // false, null, undefined, NaN, 0, ""
