@@ -2,3 +2,25 @@
     height: 15vh;
     border-radius: 50%;
 }
+
+/* nav {
+    height: 15vh;
+}
+
+main {
+    min-height: calc(100vh - 30vh)
+}
+
+footer {
+    height: 5vh;
+} */
+
+body {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
