@@ -56,6 +56,26 @@ app.post("/subjects", (req, res) => {
     res.send({ data: req.body });
 });
 
+
+app.get("/proxy", (req, res) => {
+    /* assignment:
+     make a request to google and serve it to the client
+     you have all the knowledge to solve this exercise already
+     just solve it below
+     https://www.google.com/
+     */
+    // fetch("https://www.google.com/")
+    // .then((response) => response.text())
+    // .then((result) => res.send(result));
+    fetch("https://www.google.com/")
+    .then((response) => response.arrayBuffer())
+    .then((buffer) => {
+        const decoder = new TextDecoder("ISO-8859-1");
+        const text = decoder.decode(buffer);
+        res.send(text);
+    });
+});
+
 // task create a POST fashion brands and try sending a new fashion brand
 
         // http developer port

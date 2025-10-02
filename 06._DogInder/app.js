@@ -14,7 +14,14 @@ app.get("/matches", (req, res) => {
 });
 
 
-const PORT = 8080;
+
+
+// falsy values
+// false, null, undefined, NaN, 0, ""
+
+// short-circuit syntax
+
+const PORT = Number(process.env.PORT) || 8080;
 app.listen(PORT, () => {
     console.log('Server is running on port:', PORT); 
 });

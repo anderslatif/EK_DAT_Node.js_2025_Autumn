@@ -112,11 +112,29 @@ a|
 * Understands the security need for serving static files and can do it in Express.
 * Can recount the number of ways and approaches to redirection.
 * Understands the difference between client-side redirection and server-side.
-// * Can argue for a better way to structure the frontend (assets, pages) and how to structure HTML.
 a|
 link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_I.md[Mandatory I (Given)]
 
 link:https://github.com/anderslatif/VercelShowcaseServingStaticFiles[How to serve static files with Vercel]
+
+
+| 06. Client vs. Server / Environment Variables
+| Oct. 2nd
+a|
+* Package.json scripts.
+* Environment Variables.
+* Fetching in Node.js.
+* Semantic HTML: header, main, footer.
+a|
+* Can define and run scripts with NPM.
+* Know how to define environment variables natively in Node.js (natively = not using any libraries).
+* Fetching in the client vs. fetching in the backend.
+* Structuring HTML with semantic HTML.
+* Can point out which files are client files and which are server files.
+* Knows at least one way to style a footer so that it appears at the bottom, always.
+* Can argue for a better way to structure the frontend (assets, pages).
+a|
+Work on the mandatory: Set up pages. Add lots of documentation. Implement styling including how to display code snippets.
 
 
 |===
