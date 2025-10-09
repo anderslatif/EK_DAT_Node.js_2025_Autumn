@@ -31,4 +31,34 @@ function createMatchesProfile(dog) {
     dogMatchesImageContainerDiv.innerHTML = "";
 
     dogMatchesImageContainerDiv.appendChild(dogMatchesImageImg);
+
+    setupHammerPanEvents(dogMatchesImageImg);
+}
+
+function setupHammerPanEvents(dogImageTag) {
+    const hammertime = new Hammer(dogImageTag);
+
+    hammertime.on('pan', (event) => {
+        // Calculate the new position based on the pan movement
+        const deltaX = event.deltaX;
+
+        // Apply the transformation to the image
+        dogImageTag.style.transform = `translateX(${deltaX}px)`;
+    });
+
+    hammertime.on('panend', (event) => {
+        if (event.deltaX > 0) {
+            console.log("Ended dragging to the right");
+            // todo: Handle end of right drag here
+        } else {
+            console.log("Ended dragging to the left");
+            // todo: Handle end of left drag here
+        }
+        
+        if (dogs.length > 0) {
+            createMatchesProfile(dogs.pop());
+        } else {
+            getMatches();
+        }
+    });
 }
