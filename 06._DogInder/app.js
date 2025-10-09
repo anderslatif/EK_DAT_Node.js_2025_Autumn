@@ -8,12 +8,14 @@ app.use(express.static("public"));
 
 // ========================= PAGES =====================================
 
+import { frontpagePage, matchesPage } from './util/pagesUtil.js';
+
 app.get("/", (req, res) => {
-    res.sendFile(path.resolve('public/pages/frontend/index.html'));
+    res.send(frontpagePage);
 });
 
 app.get("/matches", (req, res) => {
-    res.sendFile(path.resolve('public/pages/matches/matches.html'));
+    res.send(matchesPage);
 });
 
 // ========================= API =======================================
