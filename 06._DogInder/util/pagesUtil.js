@@ -1,16 +1,14 @@
-import fs from 'fs';
-
-const header = readPage("./public/components/header/header.html");
-const footer = readPage("./public/components/footer/footer.html");
+import { readPage, constructPage } from "./templatingEngine.js";
 
 
 const frontpage = readPage("./public/pages/frontend/index.html");
-export const frontpagePage = header + frontpage + footer;
+export const frontpagePage = constructPage(frontpage, {
+    tabTitle: "DogInder | Welcome"
+});
 
 const matches = readPage("./public/pages/matches/matches.html");
-export const matchesPage = header + matches + footer;
+export const matchesPage = constructPage(matches, {
+    cssLinks: `<link rel="stylesheet" href="/pages/matches/matches.css">`
+});
 
 
-function readPage(path) {
-    return fs.readFileSync(path).toString();
-}
