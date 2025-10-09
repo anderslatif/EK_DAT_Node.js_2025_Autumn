@@ -5,6 +5,7 @@ const app = express();
 
 app.use(express.static("public"));
 
+
 // ========================= PAGES =====================================
 
 app.get("/", (req, res) => {
@@ -17,7 +18,13 @@ app.get("/matches", (req, res) => {
 
 // ========================= API =======================================
 
-// task create a /api/matches route that returns 5 dog objects contain urls. 
+import { getMatches } from './util/matchesUtil.js';
+
+app.get("/api/matches", async (req, res) =>  {
+    const matches = await getMatches();
+    res.send({ data: matches });
+});
+
 
 // falsy values
 // false, null, undefined, NaN, 0, ""

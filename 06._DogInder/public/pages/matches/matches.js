@@ -1,14 +1,13 @@
+let dogs = [];
 
 const dogMatchesImageContainerDiv = document.getElementById("dog-matches-image-container");
 
 function getMatches() {
-    fetch("https://dog.ceo/api/breeds/image/random")
+    fetch("/api/matches")
     .then((response) => response.json())
     .then((result) => {
-        const dog = {
-            imageURL: result.message
-        };
-        createMatchesProfile(dog);
+        dogs = result.data;
+        createMatchesProfile(dogs.pop());
     });
 }
 

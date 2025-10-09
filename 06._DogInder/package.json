@@ -18,6 +18,7 @@
     "prod": "node app.js"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.0.0",
     "express": "^5.1.0"
   },
   "devDependencies": {
