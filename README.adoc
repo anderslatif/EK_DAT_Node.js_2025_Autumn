@@ -72,7 +72,7 @@ a|
 * All the ways to send data from a client to a server.
 * Serving HTML with Express.
 a|
-* Understands the use case for Nodemon and its limitation for development.
+* Understands the use case for Nodemon and its limitation to development.
 * Can use loop methods (+map, +filter, %reduce). Can choose the right one at the appropriate time:
     - We wish to use loop methods and in a functional manner (avoiding side effects).
     - Only use for loops in JavaScript when finger counting.
