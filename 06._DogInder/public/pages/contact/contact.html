@@ -3,3 +3,18 @@
 <!-- task create an HTML form that allows users to send a message
     think about what type of fields would make sense to include 
 -->
+
+<form action="/api/contact" method="POST">
+    <fieldset>
+        <label>Name</label>
+        <input id="name" name="name" placeholder="name..." required>
+
+        <label>Email</label>
+        <input id="email" name="email" type="email" placeholder="email..." required>
+
+        <label>Message</label>
+        <textarea id="message" name="message" rows="15" cols="60"></textarea>
+
+        <button>Submit</button>
+    </fieldset>
+</form>
