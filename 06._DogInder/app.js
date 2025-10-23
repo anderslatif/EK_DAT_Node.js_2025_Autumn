@@ -5,6 +5,8 @@ const app = express();
 
 app.use(express.static("public"));
 
+import matchesRouter from './routers/matchesRouter.js';
+app.use(matchesRouter);
 
 // ========================= PAGES =====================================
 
@@ -18,14 +20,7 @@ app.get("/matches", (req, res) => {
     res.send(matchesPage);
 });
 
-// ========================= API =======================================
 
-import { getMatches } from './util/matchesUtil.js';
-
-app.get("/api/matches", async (req, res) =>  {
-    const matches = await getMatches();
-    res.send({ data: matches });
-});
 
 
 // falsy values

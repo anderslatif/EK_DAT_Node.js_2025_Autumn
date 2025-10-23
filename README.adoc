@@ -154,4 +154,30 @@ a|
 a|
 link:00._Course_Material/01._Assignments/07._Server-side_Rendering_Routers/Svelte_interactive_tutorials_introduction_props.md[Svelte interactive tutorials  (introduction / props)]
 
+
+| 08. Forms / First Svelte Project
+| Oct. 23rd
+a|
+* Routers (Express).
+* Forms.
+* Asynchronous code in Javascript.
+* First Svelte Project.
+a|
+* Can create an Express Router by heart.
+* Can work with promises and async/await. Understand why asynchronous code is relevant in Node.js.
+
+* Can create a Svelte project from scratch with `npm create vite`.
+* Understands the structure of a Svelte project and can explain it what each file does.
+* Understand the dangers of XSS and how to prevent it in frontend (avoiding innnerHTML) and backend (sanitizing).
+a|
+link:00._Course_Material/01._Assignments/08._Forms_First_Svelte_Project/toast_notifications.md[Toast Notifications]
+
+link:00._Course_Material/01._Assignments/08._Forms_First_Svelte_Project/send_emails.md[Send Emails]
+
+link:00._Course_Material/01._Assignments/08._Forms_First_Svelte_Project/register_domain_emails/register_domain_emails.md[Optional: Register Domain + Emails]
+
+link:00._Course_Material/01._Assignments/08._Forms_First_Svelte_Project/Svelte_interactive_tutorials_II.md[Svelte interactive tutorials II]
+
+
+
 |===
