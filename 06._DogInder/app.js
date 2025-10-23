@@ -7,19 +7,8 @@ app.use(express.static("public"));
 
 import matchesRouter from './routers/matchesRouter.js';
 app.use(matchesRouter);
-
-// ========================= PAGES =====================================
-
-import { frontpagePage, matchesPage } from './util/pagesUtil.js';
-
-app.get("/", (req, res) => {
-    res.send(frontpagePage);
-});
-
-app.get("/matches", (req, res) => {
-    res.send(matchesPage);
-});
-
+import pagesRouter from './routers/pagesRouter.js';
+app.use(pagesRouter);
 
 
 
