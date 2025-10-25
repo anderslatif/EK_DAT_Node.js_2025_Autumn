@@ -37,4 +37,7 @@ In your case it means that when you wish to terminate the domain you allow one.c
 
 Take a break! It can take up to an hour before you get the domain. 
 
+You will receive an email from Punktum.dk asking you to activate your new domain. The email includes your user ID and password details.
+You must complete this activation if you want to use the domain — for example, with Resend. If you do not activate the domain, the MX and TXT records will not propagate and will remain pending indefinitely.
+
 ---
