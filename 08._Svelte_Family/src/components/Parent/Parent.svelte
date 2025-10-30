@@ -3,6 +3,8 @@
 
     const { parentName, children } = $props();
 
+    import { fridgeMessages } from "../../stores/fridgeStore.js";
+
     const loveHistory = $state([
         { 
             name: "self-love",
@@ -16,12 +18,15 @@
         });
     }
 
-    const cookieJar = $state(["🍪", "🍪", "🍪", "🍪", "🍪"]);
+    let cookieJar = $state(["🍪", "🍪", "🍪", "🍪", "🍪"]);
 
-    /* 
-    assignment: allow children to eat a cookie from the jar
-    bonus: if the jar is empty, let the parent fill it
- */
+    function handleEatCookie() {
+        cookieJar.pop();
+
+        if (cookieJar.length === 0) {
+            cookieJar = ["🍪", "🍪", "🍪", "🍪", "🍪"]
+        }
+    }
 </script>
 
 <h2>{parentName}</h2>
@@ -30,7 +35,12 @@
     <span>{love.name}: {love.love}</span>   
 {/each}
 
+{#each cookieJar as cookie}
+    <span>{cookie}</span>   
+{/each}
+
+<button onclick={fridgeMessages.wipe}>Wipe fridge</button>
 
 {#each children as child (child.name)}
-    <Child {...child} onShowLove={handleShowLove} />
+    <Child {...child} onShowLove={handleShowLove} onEatCookie={handleEatCookie} />
 {/each}
