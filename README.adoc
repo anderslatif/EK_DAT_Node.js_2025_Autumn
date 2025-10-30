@@ -176,6 +176,20 @@ link:00._Course_Material/01._Assignments/08._Forms_First_Svelte_Project/register
 
 link:00._Course_Material/01._Assignments/08._Forms_First_Svelte_Project/Svelte_interactive_tutorials_II.md[Svelte interactive tutorials II]
 
+| 09. Svelte Family
+| Oct. 30th
+a|
+* Passing data between components.
+* Svelte stores.
+a|
+* Understand the tree structure of web frameworks (parent/child). 
+* Fully understand the different ways to pass data in Svelte. Can code it too.
+a|
+link:00._Course_Material/01._Assignments/09._Svelte_Family/Component_Hierarchy.md[Svelte Family - Component Hierarchy]
+
+link:00._Course_Material/01._Assignments/09._Svelte_Family/toast_notifications.md[Toast Notifications]
+
+link:00._Course_Material/01._Assignments/09._Svelte_Family/login_signup.md[Login / Signup]
 
 
 |===
