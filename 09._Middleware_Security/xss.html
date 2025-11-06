@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+
+<script>
+        const containerDiv = document.getElementById("container");
+
+
+        containerDiv.innerHTML = sanitizeXSS(`<img src="x" onerror="alert('XSS')">`);
+
+        function sanitizeXSS(string) {
+            return string
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#39;')
+                .replaceAll('`', '&#x60;')
+                .replaceAll('/', '&#x2F;');
+        }
+</script>
+</body>
+</html>
