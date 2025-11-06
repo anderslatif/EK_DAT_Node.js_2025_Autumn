@@ -1,6 +1,21 @@
 import express from 'express';
 const app = express();
 
+
+import session from 'express-session';
+
+app.use(session({
+    // todo change the secret!!!!
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
+
+import helmet from 'helmet';
+app.use(helmet());
+
+
 import { rateLimit } from 'express-rate-limit'
 
 const generalLimiter = rateLimit({
@@ -23,6 +38,9 @@ const authLimiter = rateLimit({
 
 app.use("/auth", authLimiter);
 
+
+import sessionRouter from './routers/sessionRouter.js';
+app.use(sessionRouter);
 
 import authRouter from './routers/authRouter.js';
 app.use(authRouter);

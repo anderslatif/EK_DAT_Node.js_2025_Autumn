@@ -215,7 +215,7 @@ a|
 a|
 link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_II.md[Mandatory II Given]
 
-Mandatory II: Make a choice between JWT or sessions. Either way, you should be informed of the pros and cons of each choice. Create the backend and setup the relevant middleware. Add security to the backend.
+Mandatory II: Make a choice between JWT or sessions. Either way, you should be informed of the pros and cons of each choice. Create the backend and setup the relevant middleware. Until next week, focus on setting up the security to the backend.
 
 
 
