@@ -4,6 +4,12 @@
 
 link:00._Course_Material/00._Meta_Course_Material/about_the_course.md[About the course]
 
+== Mandatories
+
+link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_I.md[Mandatory I]
+
+link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_II.md[Mandatory II]
+
 **Taught on**: Thursday
 
 == Semester Plan
@@ -190,6 +196,27 @@ link:00._Course_Material/01._Assignments/09._Svelte_Family/Component_Hierarchy.m
 link:00._Course_Material/01._Assignments/09._Svelte_Family/toast_notifications.md[Toast Notifications]
 
 link:00._Course_Material/01._Assignments/09._Svelte_Family/login_signup.md[Login / Signup]
+
+
+| 10. Middleware / Security
+| Nov. 6th
+a|
+* Writing custom middleware in Express.
+* Rate-limiter.
+* Express session.
+* Bcrypt.
+* XSS
+a|
+* Understands how middleware works in Express, why order matters and how to use it to your advantage. 
+* Can use a rate-limiter.
+* Understands how sessions work on the server.
+* Can argue about the pros and cons of JWT vs. session.
+* Understand the dangers of XSS and how to prevent it in frontend (avoiding innnerHTML) and backend (sanitizing).
+a|
+link:00._Course_Material/01._Assignments/00._Mandatories/Mandatory_II.md[Mandatory II Given]
+
+Mandatory II: Make a choice between JWT or sessions. Either way, you should be informed of the pros and cons of each choice. Create the backend and setup the relevant middleware. Add security to the backend.
+
 
 
 |===
