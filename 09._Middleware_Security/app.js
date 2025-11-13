@@ -62,7 +62,7 @@ app.all("/{*splat}", (req, res) => {
     res.status(404).send({ data: "Didn't match with a route" });
 });
 
-const PORT = 8080 || process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
 const server = app.listen(PORT, () => {
     console.log("Server is running on port", server.address().port);
