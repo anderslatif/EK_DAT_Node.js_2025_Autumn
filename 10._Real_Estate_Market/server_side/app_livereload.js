@@ -3,26 +3,50 @@ import express from 'express';
 const app = express();
 
 import path from 'path';
-import { readFileSync, watch } from 'fs';
+import { readFileSync } from 'fs';
+import chokidar from 'chokidar';
 
 // Simple live reload with SSE
-let client = null;
+const clients = [];
 
-// Watch dist folder for changes
-watch(path.resolve('../client/dist'), { recursive: true }, () => {
-  if (client) client.write('data: reload\n\n');
-});
-
-// SSE endpoint for live reload
+// SSE endpoint for live reload - MUST be first
 app.get('/livereload', (req, res) => {
-  res.setHeader('Content-Type', 'text/event-stream');
-  res.setHeader('Cache-Control', 'no-cache');
-  res.setHeader('Connection', 'keep-alive');
-  client = res;
-  req.on('close', () => client = null);
+  res.writeHead(200, {
+    'Content-Type': 'text/event-stream',
+    'Cache-Control': 'no-cache',
+    'Connection': 'keep-alive'
+  });
+  res.write('\n');
+
+  clients.push(res);
+
+  req.on('close', () => {
+    const index = clients.indexOf(res);
+    if (index !== -1) clients.splice(index, 1);
+  });
 });
 
-app.use(express.static(path.resolve('../client/dist')));
+// Watch dist folder for changes with chokidar
+chokidar.watch(path.resolve('../client/dist'), {
+  ignoreInitial: true,
+  awaitWriteFinish: {
+    stabilityThreshold: 100,
+    pollInterval: 100
+  }
+}).on('all', () => {
+  clients.forEach(client => {
+    try {
+      client.write('data: reload\n\n');
+    } catch (error) {
+      // Ignore errors when writing to closed connections
+    }
+  });
+});
+
+// Serve static files but exclude index.html in order to inject the livereload script later
+app.use(express.static(path.resolve('../client/dist'), {
+  index: false
+}));
 
 app.use(express.json());
 
@@ -46,19 +70,18 @@ app.use(housesRouter);
 app.use((req, res) => {
   const filePath = path.resolve('../client/dist/index.html');
   let html = readFileSync(filePath, 'utf8');
-  const liveReloadScript = `
-    <script>
-      new EventSource('/livereload').onmessage = () => location.reload();
-    </script>
-  `;
+  const liveReloadScript = `<script>
+      let eventSource = new EventSource('/livereload');
+      eventSource.onmessage = () => {
+        eventSource.close();
+        location.reload();
+      };
+      window.addEventListener('beforeunload', () => eventSource.close());
+</script>`;
   html = html.replace('</head>', `${liveReloadScript}</head>`);
   res.setHeader('Content-Type', 'text/html');
   res.send(html);
 });
-
-// app.get("/{*splat}", (req, res) => {
-//   res.sendFile(path.resolve('../client/dist/index.html'));
-// });
 
 const PORT = Number(process.env.PORT) || 8080;
 app.listen(PORT, () => console.log("Server is running on port", PORT));
