@@ -1,6 +1,8 @@
 import db from './connection.js';
 
-// db.exec  run DDL and DCL against the database
+// db.all   for SELECT
+// db.run   for INSERT, UPDATE, DELETE
+// db.exec  run DDL and DCL against the database without parameters
 
 // const deleteMode = process.argv.find((argument) => argument.includes('delete'));
 const deleteMode = process.argv.includes('delete');
@@ -10,7 +12,6 @@ if (deleteMode) {
     db.exec(`DROP TABLE IF EXISTS exercises;`);
     db.exec(`DROP TABLE IF EXISTS users;`);
 }
-
 
 
 /*
@@ -41,18 +42,10 @@ CREATE TABLE IF NOT EXISTS exercises (
 
 
 
-
-
-
-
-
-
-
-
-
-/* 
-
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-        
-        
-*/
+// seeding
+// DML
+if (deleteMode) {
+    db.run(`INSERT INTO users (username, role) VALUES ('anders', 'STAFF');`);
+    db.run(`INSERT INTO exercises (name, difficulty, user_id) VALUES ('squats', 7, 1);`);
+    db.run(`INSERT INTO exercises (name, user_id) VALUES ('burpees', 1);`);
+}
