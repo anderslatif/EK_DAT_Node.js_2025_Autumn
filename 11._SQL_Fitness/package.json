@@ -1,0 +1,18 @@
+{
+  "name": "11._sql_fitness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deleteDatabase": "node ./database/createDatabase.js delete",
+    "updateDatabase": "node ./database/createDatabase.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
