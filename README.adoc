@@ -244,7 +244,8 @@ Mandatory II: Setup the fullstack project, create routing in the frontend and se
 a|
 * SQLite.
 * DDL / DML.
-* PostgreSQL / MySQL.
+* MySQL.
+* Multer (File Upload)
 a|
 * Can work with relational databases.
 * Can write basic SQL queries without help.
