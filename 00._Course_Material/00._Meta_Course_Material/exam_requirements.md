@@ -77,7 +77,7 @@ Demo means no code but constantly showing features. A feature in the context to 
 
 It’s not a pitch, it’s a demo. The UI and UX should be so well made that the website doesn’t require explanations and any users should be able to see the design and flow and understand what it’s about.
 
-**NEVER** show how to log in or sign up. The exception is if you've implemented additional features beyond the Mandatory II requirements (e.g. a forgot password feature/advanced validation). 
+Be logged in with a user at the start of the exam. The exception is if you've implemented additional features beyond the Mandatory II requirements (e.g. a forgot password feature/advanced validation). 
 
 **Info**: I might seem impatient during the demo part but it’s because I use the measured time it takes to demo unique features of the system to place you in a grade category. Expect me to instruct you if the demo sidetracks or is slowed down by explanations. If talking during the demo part means not showcasing features then a silent demo is preferred. The goal is not to create a stressful exam but for me to create an objective measurement to the grading system.   
 
