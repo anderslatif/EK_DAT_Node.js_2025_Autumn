@@ -19,7 +19,10 @@ But the normal case is to use variable schema.
 
 ## How to handle relations in MongoDB
 
-<!-- todo explain this -->
+No support for relations in MongoDB
+
+1. Manually create a key and set it on the document in the other collection and in programming get the document and manually query the other collection for the corresponding document.
+2. Denormalization
 
 
 ## MySQL Commands      vs.     MongoDB
@@ -28,13 +31,15 @@ SHOW DATABASES                 show dbs
 CREATE DATABASE ...            use <database_name>
 USE DATABASE <database_name>   use <database_name>
 CREATE TABLE <table_name>      db.createCollection("<collection_name>")
+DROP TABLE <table_name>        db.dropCollection("<collection_name>")
+
 
 ## MySQL CRUD         vs.      MongoDB
 INSERT ...                     insertOne, insertMany, bulkWrite
 SELECT ...                     db.<collection_name>.find({ "key": "<search_criteria>" })
-
+UPDATE ...                     updateOne, updateMany({ "key": "<search_criteria>" }, { $set: { "key": "value" }}), replaceOne, replaceMany (replace, replaces the document instead of just updating it)
 DELETE ...                     deleteOne, deleteMany({ "key": "<search_criteria>" })
 
 
-
+<!-- assignment create a games_characters -->
 
