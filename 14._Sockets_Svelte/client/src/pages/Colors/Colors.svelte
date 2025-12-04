@@ -12,7 +12,9 @@
     let socket;
 
     onMount(() => {
-        socket = io("http://localhost:8080");
+        socket = io("http://localhost:8080", {
+            withCredentials: true
+        });
 
         socket.on("server-sends-color", (data) => {
             // don't actually do this, do it in the Svelte way instead
