@@ -1,6 +1,8 @@
 import express from 'express';
 const app = express();
 
+app.use(express.static("public"));
+
 import http from 'http';
 const server = http.createServer(app);
 
