@@ -12,6 +12,18 @@ const io = new Server(server);
 io.on("connection", (socket) => {
     console.log("A socket connected", socket.id);
 
+    socket.on("client-sends-color", (data) => {
+        
+        // emits to all the sockets in the io namespace
+        io.emit("server-sends-color", data);
+
+        // emits to all the sockets but itself
+        // socket.broadcast.emit("server-sends-color", data);
+
+        // emits to the socket itself
+        // socket.emit("server-sends-color", data);
+    });
+
     socket.on("disconnect", () => {
         console.log("Socket disconnected", socket.id);
     });

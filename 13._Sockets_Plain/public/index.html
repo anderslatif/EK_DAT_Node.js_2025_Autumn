@@ -9,16 +9,26 @@
     <h2>Colors</h2>
 
     <input type="color" id="color-picker">
-    <button>Submit Color</button>
+    <button onclick="submitColor()">Submit Color</button>
 
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
         const socket = io();
 
+        const colorInput = document.getElementById("color-picker")
+
         function submitColor() {
-            // assignment console.log the color when the user clicks "Submit Color" 
+            const color = colorInput.value;
+
+            socket.emit("client-sends-color", { color });
         }
+
+        socket.on("server-sends-color", (data) => {
+            console.log(data.color);
+
+            document.body.style.backgroundColor = data.color;
+        });
 
     </script>    
 </body>
