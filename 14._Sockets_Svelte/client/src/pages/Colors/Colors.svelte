@@ -2,6 +2,11 @@
     import io from 'socket.io-client';
 
     import { onMount } from 'svelte';
+    
+    import ColorsList from '../../component/ColorsList/ColorsList.svelte';
+
+    import { nickname } from '../../stores/nicknameStore.js';
+    import { colorsList } from '../../stores/colorsList.js';
 
     let colorInputValue = "#0000ff";
     let socket;
@@ -12,11 +17,19 @@
         socket.on("server-sends-color", (data) => {
             // don't actually do this, do it in the Svelte way instead
             document.body.style.backgroundColor = data.color;
+
         });
     });
 
     function submitColor() {
-        socket.emit("client-sends-color", { color: colorInputValue });
+        const newColors = { color: colorInputValue, nickname: $nickname };
+
+        socket.emit("client-sends-color", newColors);
+        
+        colorsList.update((colorsListStoreValues) => {
+            colorsListStoreValues.push(newColors);
+            return colorsListStoreValues;
+        });
     }
 </script>
 
@@ -24,3 +37,5 @@
 
 <input type="color" bind:value={colorInputValue}>
 <button onclick={submitColor}>Submit Color</button>
+
+<ColorsList />
