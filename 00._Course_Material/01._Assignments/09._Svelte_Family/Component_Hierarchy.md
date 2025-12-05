@@ -8,6 +8,6 @@ Better resolution when downloaded:
 
 ## PNG 
 
-Github displays this better:
+GitHub displays this better:
 
 <img src="./Component_Hierarchy.png" alt="Svelte Family Component Hierarchy">

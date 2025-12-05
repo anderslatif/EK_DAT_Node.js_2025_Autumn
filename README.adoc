@@ -285,6 +285,8 @@ a|
 * Can work with Socket.io in both client and server.
 * Can listen to and emit events without having to look it up.
 a|
+link:00._Course_Material/01._Assignments/14._Sockets/Socket.io_Infogram.md[Socket.io Infogram]
+
 
 
 |===
