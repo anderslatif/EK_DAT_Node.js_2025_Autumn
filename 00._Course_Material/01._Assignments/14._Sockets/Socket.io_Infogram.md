@@ -1,4 +1,4 @@
 # Socket.io Infogram
 
-![Component Hierarchy](./Socket.io.svg)
+<img src="./Socket.io.png" alt="Socket.io infogram">
 
